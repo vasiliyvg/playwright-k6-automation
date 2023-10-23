@@ -40,4 +40,4 @@ USER $USER_ID
 RUN id
 
 # Run cypress tests
-ENTRYPOINT [ "npm", "run", "test" ]
+ENTRYPOINT [ "npm", "run", "test:chromium" ]
