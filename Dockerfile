@@ -11,7 +11,6 @@ ENV TEST_RESULTS_DIR=test-results
 # there is a built-in user "node" that comes from the very base Docker Node image
 # we are going to recreate this user and give it _same id_ as external user
 # that is going to run this container.
-# `bamboo` user and group
 ARG USER_ID=500
 ARG GROUP_ID=501
 

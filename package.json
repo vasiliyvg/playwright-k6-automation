@@ -1,6 +1,5 @@
 {
-  "name": "introspect-automation",
-  "version": "0.0.0",
+  "name": "playwright-k6-automation",
   "private": true,
   "scripts": {
     "pw:install": "npx playwright test",
@@ -8,6 +7,8 @@
     "test:chromium": "npx playwright test --project=chromium",
     "test:ui:chromium": "yarn test --ui --project=chromium",
     "test:debug": "PWDEBUG=1 DEBUG=pw:api npm run test",
+    "test:performance": "K6_BROWSER_ENABLED=true k6 run k6/tests/*",
+    "k6:lint": "npx eslint k6",
     "lint": "eslint . --ext .ts",
     "report": "npx playwright show-report"
   },
