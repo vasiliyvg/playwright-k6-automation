@@ -19,3 +19,7 @@ jobs:
 
     - name: Run tests
       run: docker run --rm -e BASE_URL -e USER_NAME -e PASSWORD --name ${{env.FUNCTIONAL_TESTING_IMAGE_NAME}} ${{env.FUNCTIONAL_TESTING_IMAGE_NAME}}:latest
+      env:
+        BASE_URL: ${{ env.USER_NAME }}
+        USER_NAME: ${{ secrets.USER_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
