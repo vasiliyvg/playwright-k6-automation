@@ -1,0 +1,23 @@
+name: Run functional tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  functional-testing:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Run tests
+      run: docker run --rm -e BASE_URL -e USER_NAME -e PASSWORD --name $IMAGE_NAME $IMAGE_NAME:latest
+      env:
+        IMAGE_NAME: ${{ vars.FUNCTIONAL_TESTING_IMAGE_NAME }}
+        BASE_URL: ${{ vars.BASE_URL }}
+        USER_NAME: ${{ secrets.USER_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
