@@ -2,8 +2,7 @@
 Example how to combine functional [https://playwright.dev/](playwright) and performance [https://k6.io/](k6) testing frameworks in one project.
 
 ## Getting started
-Current example testing https://demoqa.com. 
-It includes tests for: login and moving across pages.
+Current example tests a website at https://demoqa.com. It includes tests for logging in and navigating between pages.
 ### Prerequisites
 1. Register a new account https://demoqa.com/register.
 2. Export environment variables:
